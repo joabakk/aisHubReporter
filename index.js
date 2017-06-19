@@ -78,7 +78,7 @@ module.exports = function(app) {
 
   plugin.id = "marinetrafficreporter"
   plugin.name = "Marine Traffic Reporter"
-  plugin.description = "Plugin that reports self's position periodically to Marine Traffic via UDP ASI messages"
+  plugin.description = "Plugin that reports self's position periodically to Marine Traffic via UDP AIS messages"
 
   plugin.schema = {
     type: "object",
@@ -88,13 +88,13 @@ module.exports = function(app) {
     properties: {
       ipaddress: {
         type: "string",
-        title: "UDP endpoint IP address",
-        default: "0.0.0.0"
+        title: "UDP endpoint IP address, 144.76.105.244 for AISHub, 5.9.207.224 for MarineTraffic",
+        default: "144.76.105.244"
       },
       port: {
         type: "number",
-        title: "Port",
-        default: 12345
+        title: "Port, 2500 for AISHub, 5321 for MarineTraffic",
+        default: 2500
       },
       updaterate: {
         type: "number",
