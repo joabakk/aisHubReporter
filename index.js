@@ -78,7 +78,7 @@ module.exports = function(app) {
 
   plugin.id = "marinetrafficreporter"
   plugin.name = "Marine Traffic Reporter"
-  plugin.description = "Plugin that reports self's position periodically to Marine Traffic via UDP AIS messages"
+  plugin.description = "Plugin that reports self's position periodically to AISHub or Marine Traffic via UDP AIS messages"
 
   plugin.schema = {
     type: "object",
